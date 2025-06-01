@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Literacy 101</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    h2{
+      font-family: 'Caveat Brush', cursive;
+  font-size: 2.5rem;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e0f8fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .layout {
+      display: flex;
+      padding: 40px;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .filter-box {
+      background-color: #008b8b;
+      color: white;
+      padding: 30px 20px;
+      border-radius: 10px;
+      width: 300px;
+      flex-shrink: 0;
+    }
+
+    .filter-box h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .filter-box label {
+      display: block;
+      margin: 15px 0 5px;
+      font-size: 1.2rem;
+    }
+
+    .filter-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .filter-box select {
+      flex: 1;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+      background-color: #e0f8fa;
+      color: #000;
+    }
+
+    .related-questions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .related-questions button {
+      background-color: #e0f8fa;
+      color: #000;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 1rem;
+      text-align: left;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .related-questions button:hover {
+      background-color: #b2ebf2;
+    }
+
+    .article-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1;
+    }
+
+    .card {
+      background-color: #ffffff;
+      display: flex;
+      gap: 15px;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      align-items: center;
+    }
+
+    .card img {
+      width: 100px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .card-body {
+      flex: 1;
+    }
+
+    .card-title {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .card-text {
+      margin-top: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .filter-box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Media Literacy 101</h1>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="catalogue.html">Catalogue</a>
+      <a href="offlinestuff.html">Offline Resources</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <h2 style="font-family: 'Caveat Brush', cursive;
+  font-size: 2.5rem;">
+    CATALOGUE!</h2>
+
+  <div class="layout">
+    <!-- FILTER SIDEBAR -->
+    <div class="filter-box">
+      <h3>Filter by:</h3>
+
+      <label for="type">Type</label>
+      <div class="filter-row">
+        <select id="type">
+          <option value="">Select Type</option>
+          <option value="video">Video</option>
+          <option value="article">Article</option>
+        </select>
+        <select id="type2">
+          <option value="">Select Another</option>
+          <option value="video">Video</option>
+          <option value="article">Article</option>
+        </select>
+      </div>
+
+      <label for="medium">Medium</label>
+      <div class="filter-row">
+        <select id="medium">
+          <option value="">Select Medium</option>
+          <option value="news">News</option>
+          <option value="social">Social Media</option>
+          <option value="documentary">Documentary</option>
+        </select>
+        <select id="medium2">
+          <option value="">Select Another</option>
+          <option value="news">News</option>
+          <option value="social">Social Media</option>
+          <option value="documentary">Documentary</option>
+        </select>
+      </div>
+
+      <label>Related Question</label>
+      <div class="related-questions">
+        <button type="button">What is media literacy?</button>
+        <button type="button">How to research?</button>
+        <button type="button">How to identify misinformation?</button>
+        <button type="button">How to evaluate a source?</button>
+      </div>
+    </div>
+
+    <!-- ARTICLE CARDS -->
+    <div class="article-cards">
+      <div class="card">
+        <a href="https://newseumed.org/tools/lesson-plan/escape-junk-news" target="_self">
+          <img src="images/escapejunknews.jpg" alt="Article 1" />
+        </a>
+        <div class="card-body">
+          <h3 class="card-title">"E.S.C.A.P.E Junk News"</h3>
+          <p class="card-text">Learn a handy acronym to remember six key concepts when evaluating information.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <a href="https://www.bemediasmart.ie/tips/media-literacy-10-top-tips/" target="_self">
+          <img src="images/bemediasmart.jpeg" alt="Article 2" />
+        </a>
+        <div class="card-body">
+          <h3 class="card-title">"Media Literacy: 10 top tips"</h3>
+          <p class="card-text">10 actionable tips to improve media literacy!</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <a href="https://www.library.cornell.edu/about/news/getting-your-facts-straight-tips-on-media-literacy/" target="_self">
+          <img src="images/cornelluni.jpeg" alt="Article 3" />
+        </a>
+        <div class="card-body">
+          <h3 class="card-title">"Getting your facts straight: Tips on media literacy"</h3>
+          <p class="card-text">From the Cornell University Library.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <a href="https://www.pbslearningmedia.org/resource/c7ab68b7-0f23-4888-952d-127ec9b71c17/top-4-tips-to-spot-bad-science-reporting-above-the-noise/" target="_self">
+          <img src="images/thumbnail.png" alt="Article 4" />
+        </a>
+        <div class="card-body">
+          <h3 class="card-title">"Top 4 tips to spot bad science reporting"</h3>
+          <p class="card-text">PBS Learning Media.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <a href="https://www.pbslearningmedia.org/resource/nmlit17-ela-idfakenews/identifying-fake-news/" target="_self">
+          <img src="images/fakenews.png" alt="Article 5" />
+        </a>
+        <div class="card-body">
+          <h3 class="card-title">"Identifying Fake News"</h3>
+          <p class="card-text">PBS Learning Media.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <a href="https://www.youtube.com/watch?v=sigJwoeU6OI" target="_self">
+          <img src="images/red&blue.avif" alt="Video 1" />
+        </a>
+        <div class="card-body">
+          <h3 class="card-title">"How to Research"</h3>
+          <p class="card-text">Overly Sarcastic Productions.</p>
+        </div>
+      </div>
+
+    </div> <!-- end of article-cards -->
+  </div> <!-- end of layout -->
+
+</body>
+</html>
